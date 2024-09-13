@@ -1,16 +1,33 @@
 
+def adicao(num1, num2):
+    return num1 + num2
+
+
+def subtracao(num1, num2):
+    return num1 - num2
+
+
+def multiplicacao(num1, num2):
+    return num1 * num2
+
+
+def divisao(num1, num2):
+    if num2 != 0:
+        return num1 / num2
+    else:
+        return "Erro: Divisão por zero!"
+
+
+
 def calculadora(operacao, num1, num2):
     if operacao == '+':
-        return num1 + num2
+        return adicao(num1, num2)
     elif operacao == '-':
-        return num1 - num2
+        return subtracao(num1, num2)
     elif operacao == '*':
-        return num1 * num2
+        return multiplicacao(num1, num2)
     elif operacao == '/':
-        if num2 != 0:
-            return num1 / num2
-        else:
-            return "Erro: Divisão por zero!"
+        return divisao(num1, num2)
     else:
         return "Operação inválida!"
 
